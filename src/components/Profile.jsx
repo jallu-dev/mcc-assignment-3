@@ -1,15 +1,29 @@
 const Profile = ({ student }) => {
+  console.log(student);
   return (
     <div className="profile-container">
       <div className="img-container">
-        <img src={require("../asserts/" + props.student.profilePic)} alt="" />
+        {student.studentId && (
+          <img src={require("../asserts/imgs/" + student.profilePic)} alt="" />
+        )}
       </div>
       <div className="details-container">
-        <p>ID : {student.studentId}</p>
-        <p>Full name : {student.firstName + student.lastName}</p>
-        <p>Age : {student.age}</p>
-        <p>Course : {student.course}</p>
-        <p>Gender : {student.gender}</p>
+        <p>
+          <span className="label">ID </span>: {student.studentId}
+        </p>
+        <p>
+          <span className="label">Full name </span>:{" "}
+          {student.firstName + student.lastName}
+        </p>
+        <p>
+          <span className="label">Age </span>: {student.age}
+        </p>
+        <p>
+          <span className="label">Course </span>: {student.course}
+        </p>
+        <p>
+          <span className="label">Gender </span>: {student.gender}
+        </p>
         {/* <p>
           Address : {student.address.city},{student.address.country}
         </p> */}

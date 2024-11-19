@@ -15,7 +15,7 @@ const Home = () => {
   }, [studentId]);
 
   return (
-    <div style={{ display: "flex" }}>
+    <div style={{ display: "flex", padding: "20px" }}>
       <Table students={students} setStudentId={setStudentId} />
       {student && <Profile student={student} />}
     </div>

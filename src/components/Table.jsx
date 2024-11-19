@@ -20,7 +20,7 @@ const Table = ({ students, setStudentId }) => {
               <td>{student.lastName}</td>
               <td>{student.course}</td>
               <td>{student.address.country}</td>
-              <td>
+              <td style={{ textAlign: "center" }}>
                 <button id={student.studentId} onClick={(e) => onViewClick(e)}>
                   View
                 </button>
